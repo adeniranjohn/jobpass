@@ -11,7 +11,7 @@ import pdfFonts from 'pdfmake/build/vfs_fonts';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent implements OnInit {
-  user;
+
   constructor() {
     pdfMake.vfs = pdfFonts.pdfMake.vfs;
   }
@@ -28,11 +28,69 @@ export class ResumeComponent implements OnInit {
   }
 
   getData(){
-    this.user = sessionStorage.getItem('header');
-    console.log(this.user);
+
   }
   getResume(){
-    const resumeData = { content:[ {text:'John Adeniran', fontSize: 20, style: 'header'}, 'a freelance web/software developer'] };
+    const user = sessionStorage.getItem('header');
+    const resumeData = {
+      content:[
+        {
+          text: 'John Adeniran' , style: 'header'
+        },
+        {
+          text: 'web developer - jasolajohn@gmail.com', style: 'sub'
+        },
+        {
+          text: 'Lagos, Nigeria - +23408131510308', style: 'sub'
+        },
+        {
+          text: 'SUMMARY', style: { alignment: 'left', bold: true}
+        },
+        {
+          text: `Lorem ipsum is placeholder text commonly used in the graphic, 
+          print, and publishing industries for previewing layouts and visual
+           mockups.`
+        },
+        {
+            columns: [
+              {
+                width: 'auto',
+                text: 'Web/Mobile  Developer'
+              },
+            {
+              width: '100',
+              text: '8 March 2019 - 10 August 2020',
+              style: 'date'
+            },
+            {
+              width: 100,
+                ul: [
+                  'hjfytfhjgkjhihihibjbjbjbnkjbkjbknkjkkknkknknknknknkknknj',
+                  'hjfytfhjgkjhihihibjbjbjbnkjbkjbknkjkkknkknknknknknkknknj',
+                  'hjfytfhjgkjhihihibjbjbjbnkjbkjbknkjkkknkknknknknknkknknj'
+
+                ]
+
+            }
+            ],
+            columnGap: 10
+          }
+        
+    ],
+    styles:
+    { 
+      header: {
+      alignment: `center`,
+      fontSize: 40
+    },
+      sub: { fontSize: 10, alignment: 'center' },
+      date: { alignment: 'right'}
+  },
+    defaultStyle: {
+      fontSize: 10,
+      bold: false
+
+    } };
     pdfMake.createPdf(resumeData).open();
   }
 

@@ -35,59 +35,121 @@ export class ResumeComponent implements OnInit {
     const resumeData = {
       content:[
         {
-          text: 'John Adeniran' , style: 'header'
+
+          stack: [
+          'John Adeniran' ,
+            {
+              text: 'web developer - jasolajohn@gmail.com', style: 'sub'
+            },
+            {
+              text: 'Lagos, Nigeria - +23408131510308', style: 'sub'
+            }
+          ],
+          style: 'header'
         },
         {
-          text: 'web developer - jasolajohn@gmail.com', style: 'sub'
+          text: 'SUMMARY', style: { bold: true}
         },
         {
-          text: 'Lagos, Nigeria - +23408131510308', style: 'sub'
+          text: `Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.`,
+           style: {
+             alignment: 'left'
+           }
         },
         {
-          text: 'SUMMARY', style: { alignment: 'left', bold: true}
+          text: 'EDUCATION', style: { bold: true }
         },
         {
-          text: `Lorem ipsum is placeholder text commonly used in the graphic, 
-          print, and publishing industries for previewing layouts and visual
-           mockups.`
+          columns: [
+            {
+              width: '*',
+              text: 'University of Toronto',
+              style: { alignment: 'left', bold: true }
+            },
+            {
+              width: 'auto',
+              text: 'August 201 - February 2014',
+              style: { alignment: 'right' }
+            }
+          ]
+        },
+        {
+          text: 'Bachelor of Science in Electrical Engineering'
+        },
+        {
+          text: 'EXPERIENCE', style: { bold: true }
         },
         {
             columns: [
               {
-                width: 'auto',
-                text: 'Web/Mobile  Developer'
+                width: '*',
+                text: 'Web/Mobile  Developer',
+                style: {alignment: 'left', bold: true}
               },
             {
-              width: '100',
-              text: '8 March 2019 - 10 August 2020',
-              style: 'date'
+              width: 'auto',
+              text: 'March 2019 - August 2020',
+              style: { alignment: 'right'}
+            }
+            ]
+        },
+        {
+          ul: [
+            'Integrate code changes, test code changes, and document code changes',
+            'Developed Perl and PHP scripts to translate data between applications',
+              'Developed automation scripts to test storage appliances in Python',
+              'Practice agile development methodologies and work with current networking technologies',
+              'Used Hadoop to build a scalable distributed data solution'
+
+          ]
+
+        },
+        {
+          columns: [
+            {
+              width: '*',
+              text: 'Tradelot, Software Developer',
+              style: { alignment: 'left', bold: true }
             },
             {
-              width: 100,
-                ul: [
-                  'hjfytfhjgkjhihihibjbjbjbnkjbkjbknkjkkknkknknknknknkknknj',
-                  'hjfytfhjgkjhihihibjbjbjbnkjbkjbknkjkkknkknknknknknkknknj',
-                  'hjfytfhjgkjhihihibjbjbjbnkjbkjbknkjkkknkknknknknknkknknj'
-
-                ]
-
+              width: 'auto',
+              text: 'June 2008 - January 2020',
+              style: { alignment: 'right' }
             }
-            ],
-            columnGap: 10
-          }
-        
+          ]
+        },
+        {
+          ul: [
+            'Wrote, modified, and debugged software for clients',
+            'Developed code to complete assigned project by deadline',
+            'Developed HTML, CSS, JavaScript, and JSP pages for user interaction',
+            'Wrote Python scripts to load data and parse XML documents'
+
+          ]
+
+        },
+        {
+          text: 'SKILLS', style: { bold: true }
+        },
+        {
+          ul: [
+            'JavaScript',
+            'HTML',
+            'CSS'
+          ]
+        }
     ],
     styles:
-    { 
+    {
       header: {
-      alignment: `center`,
+      alignment: 'center',
       fontSize: 40
     },
       sub: { fontSize: 10, alignment: 'center' },
       date: { alignment: 'right'}
   },
     defaultStyle: {
-      fontSize: 10,
+      fontSize: 14,
       bold: false
 
     } };

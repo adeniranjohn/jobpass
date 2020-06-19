@@ -37,9 +37,9 @@ export class ResumeComponent implements OnInit {
         {
 
           stack: [
-          'John Adeniran' ,
+          'John Adeniran Omojashola' ,
             {
-              text: 'web developer - jasolajohn@gmail.com', style: 'sub'
+              text: 'web developer - jasolajohn@gmail.com', margin:[0,10,0,0], style: 'sub'
             },
             {
               text: 'Lagos, Nigeria - +23408131510308', style: 'sub'
@@ -48,7 +48,7 @@ export class ResumeComponent implements OnInit {
           style: 'header'
         },
         {
-          text: 'SUMMARY', style: { bold: true}
+          text: 'SUMMARY', margin: [ 0, 20, 0, 10],  style: { bold: true}
         },
         {
           text: `Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.`,
@@ -57,7 +57,7 @@ export class ResumeComponent implements OnInit {
            }
         },
         {
-          text: 'EDUCATION', style: { bold: true }
+          text: 'EDUCATION', margin: [ 0, 20, 0, 10], style: { bold: true }
         },
         {
           columns: [
@@ -68,16 +68,33 @@ export class ResumeComponent implements OnInit {
             },
             {
               width: 'auto',
-              text: 'August 201 - February 2014',
+              text: 'August 2012 - February 2014',
               style: { alignment: 'right' }
             }
           ]
         },
         {
-          text: 'Bachelor of Science in Electrical Engineering'
+          text: 'BSc. in Electrical Engineering', margin: [ 0, 0, 0, 10]
         },
         {
-          text: 'EXPERIENCE', style: { bold: true }
+          columns: [
+            {
+              width: '*',
+              text: 'Birch Freeman High School',
+              style: { alignment: 'left', bold: true }
+            },
+            {
+              width: 'auto',
+              text: 'May 2007 - February 2012', 
+              style: { alignment: 'right' }
+            }
+          ]
+        },
+        {
+          text: 'WASSCE/NECO', margin: [ 0, 0, 0, 10]
+        },
+        {
+          text: 'EXPERIENCE', margin: [0, 20, 0, 10], style: { bold: true }
         },
         {
             columns: [
@@ -101,7 +118,8 @@ export class ResumeComponent implements OnInit {
               'Practice agile development methodologies and work with current networking technologies',
               'Used Hadoop to build a scalable distributed data solution'
 
-          ]
+          ],
+          margin: [0, 0,0, 10]
 
         },
         {
@@ -115,7 +133,8 @@ export class ResumeComponent implements OnInit {
               width: 'auto',
               text: 'June 2008 - January 2020',
               style: { alignment: 'right' }
-            }
+            },
+            
           ]
         },
         {
@@ -125,11 +144,12 @@ export class ResumeComponent implements OnInit {
             'Developed HTML, CSS, JavaScript, and JSP pages for user interaction',
             'Wrote Python scripts to load data and parse XML documents'
 
-          ]
+          ],
+          margin: [0, 0,0, 10]
 
         },
         {
-          text: 'SKILLS', style: { bold: true }
+          text: 'SKILLS', margin: [ 0, 20, 0, 10], style: { bold: true }
         },
         {
           ul: [

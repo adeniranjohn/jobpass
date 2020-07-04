@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+label {
+  display: block;
+  margin: 5px;
+}
+
+
+input,
+textarea {
+  padding: 5px;
+  margin: 5px;
+}
+
+
+button {
+  border: none;
+  background-color: #2CBF51;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin: 5px;
+}

@@ -13,9 +13,9 @@ export class TypeformComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(header){
-    console.log(header.value);
-    sessionStorage.setItem('header', header.value);
+  save() {
+    
   }
+
 
 }

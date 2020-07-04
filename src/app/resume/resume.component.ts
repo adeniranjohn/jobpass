@@ -85,7 +85,7 @@ export class ResumeComponent implements OnInit {
             },
             {
               width: 'auto',
-              text: 'May 2007 - February 2012', 
+              text: 'May 2007 - February 2012',
               style: { alignment: 'right' }
             }
           ]
@@ -134,7 +134,7 @@ export class ResumeComponent implements OnInit {
               text: 'June 2008 - January 2020',
               style: { alignment: 'right' }
             },
-            
+
           ]
         },
         {
@@ -145,7 +145,7 @@ export class ResumeComponent implements OnInit {
             'Wrote Python scripts to load data and parse XML documents'
 
           ],
-          margin: [0, 0,0, 10]
+          margin: [0, 0, 0, 10]
 
         },
         {
